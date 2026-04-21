@@ -31,11 +31,11 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 2.1 | Design Users table (PK, fields) | `[ ]` |
-| 2.2 | Design Blogs table (PK, GSIs) | `[ ]` |
-| 2.3 | Design Comments table (PK, GSIs, parent_comment_id logic) | `[ ]` |
-| 2.4 | Design Reactions table (PK + SK composite key) | `[ ]` |
-| 2.5 | Verify every read endpoint has an indexed query path | `[ ]` |
+| 2.1 | Design Users table (PK, fields) | `[x]` |
+| 2.2 | Design Blogs table (PK, GSIs) | `[x]` |
+| 2.3 | Design Comments table (PK, GSIs, parent_comment_id logic) | `[x]` |
+| 2.4 | Design Reactions table (PK + SK composite key) | `[x]` |
+| 2.5 | Verify every read endpoint has an indexed query path | `[x]` |
 
 **Done when:** No endpoint requires a full table scan.
 
@@ -313,7 +313,7 @@ Update status after each step is verified. Never mark something Done until the "
 | Phase | Name | Status |
 |-------|------|--------|
 | 1 | Design on Paper | `[x]` |
-| 2 | DynamoDB Schema | `[ ]` |
+| 2 | DynamoDB Schema | `[x]` |
 | 3 | Local Project Setup | `[ ]` |
 | 4 | Cognito Setup | `[ ]` |
 | 5 | AWS Resources Setup | `[ ]` |
