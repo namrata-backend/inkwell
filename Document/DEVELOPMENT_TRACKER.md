@@ -47,17 +47,17 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 3.1 | Create project folder, git init, create GitHub repo | `[ ]` |
-| 3.2 | Create Python virtual environment | `[ ]` |
-| 3.3 | Install dependencies, create requirements.txt and requirements-dev.txt | `[ ]` |
-| 3.4 | Create folder structure (app/, routers/, db/, auth/, models/, tests/) | `[ ]` |
-| 3.5 | Create .env and .env.example | `[ ]` |
-| 3.6 | Create .gitignore | `[ ]` |
-| 3.7 | Set up pre-commit hooks (black, flake8, isort) | `[ ]` |
-| 3.8 | Write GET /api/v1/health endpoint | `[ ]` |
-| 3.9 | Run uvicorn locally, verify Swagger loads at /docs | `[ ]` |
-| 3.10 | Create README.md (initial version) | `[ ]` |
-| 3.11 | Push to GitHub, set branch protection on main and develop | `[ ]` |
+| 3.1 | Create project folder, git init, create GitHub repo | `[x]` |
+| 3.2 | Create Python virtual environment | `[x]` |
+| 3.3 | Install dependencies, create requirements.txt and requirements-dev.txt | `[x]` |
+| 3.4 | Create folder structure (app/, routers/, db/, auth/, models/, tests/) | `[x]` |
+| 3.5 | Create .env and .env.example | `[x]` |
+| 3.6 | Create .gitignore | `[x]` |
+| 3.7 | Set up pre-commit hooks (black, flake8, isort) | `[x]` |
+| 3.8 | Write GET /api/v1/health endpoint | `[x]` |
+| 3.9 | Run uvicorn locally, verify Swagger loads at /docs | `[x]` |
+| 3.10 | Create README.md (initial version) | `[x]` |
+| 3.11 | Push to GitHub, set branch protection on main and develop | `[x]` |
 
 **Done when:** FastAPI runs locally, /docs loads, repo is on GitHub with .env excluded.
 
@@ -314,7 +314,7 @@ Update status after each step is verified. Never mark something Done until the "
 |-------|------|--------|
 | 1 | Design on Paper | `[x]` |
 | 2 | DynamoDB Schema | `[x]` |
-| 3 | Local Project Setup | `[ ]` |
+| 3 | Local Project Setup | `[x]` |
 | 4 | Cognito Setup | `[ ]` |
 | 5 | AWS Resources Setup | `[ ]` |
 | 6 | Auth Layer | `[ ]` |
