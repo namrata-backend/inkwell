@@ -86,14 +86,14 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 5.1 | Create Users DynamoDB table | `[ ]` |
-| 5.2 | Create Blogs DynamoDB table with GSIs | `[ ]` |
-| 5.3 | Create Comments DynamoDB table with GSIs | `[ ]` |
-| 5.4 | Create Reactions DynamoDB table (composite PK+SK) | `[ ]` |
-| 5.5 | Manual test: insert and query item in each table | `[ ]` |
-| 5.6 | Create S3 bucket (block public access ON) | `[ ]` |
-| 5.7 | Configure CORS on S3 bucket | `[ ]` |
-| 5.8 | Manual test: upload and download file via console | `[ ]` |
+| 5.1 | Create Users DynamoDB table | `[X]` |
+| 5.2 | Create Blogs DynamoDB table with GSIs | `[X]` |
+| 5.3 | Create Comments DynamoDB table with GSIs | `[X]` |
+| 5.4 | Create Reactions DynamoDB table (composite PK+SK) | `[X]` |
+| 5.5 | Manual test: insert and query item in each table | `[X]` |
+| 5.6 | Create S3 bucket (block public access ON) | `[X]` |
+| 5.7 | Configure CORS on S3 bucket | `[X]` |
+| 5.8 | Manual test: upload and download file via console | `[X]` |
 
 **Done when:** Every table and bucket responds to manual operations in the console.
 
