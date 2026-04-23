@@ -7,6 +7,7 @@ from mangum import Mangum
 
 from app.exceptions import register_exception_handlers
 from app.logging_config import logger
+from app.routers.auth import router as auth_router
 
 
 @asynccontextmanager
@@ -26,6 +27,7 @@ app = FastAPI(
 )
 
 register_exception_handlers(app)
+app.include_router(auth_router)
 
 
 @app.middleware("http")
