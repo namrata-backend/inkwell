@@ -105,16 +105,16 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 6.1 | Build POST /api/v1/auth/signup | `[ ]` |
-| 6.2 | Build POST /api/v1/auth/confirm | `[ ]` |
-| 6.3 | Build POST /api/v1/auth/login | `[ ]` |
-| 6.4 | Build POST /api/v1/auth/refresh | `[ ]` |
-| 6.5 | Build POST /api/v1/auth/forgot-password | `[ ]` |
-| 6.6 | Build POST /api/v1/auth/reset-password | `[ ]` |
-| 6.7 | Build JWT verification middleware (FastAPI dependency) | `[ ]` |
-| 6.8 | Build GET /api/v1/auth/me (protected, returns user_id) | `[ ]` |
-| 6.9 | Test all auth flows in Swagger | `[ ]` |
-| 6.10 | Test middleware: no token → 401, bad token → 401, valid → 200 | `[ ]` |
+| 6.1 | Build POST /api/v1/auth/signup | `[X]` |
+| 6.2 | Build POST /api/v1/auth/confirm | `[X]` |
+| 6.3 | Build POST /api/v1/auth/login | `[X]` |
+| 6.4 | Build POST /api/v1/auth/refresh | `[X]` |
+| 6.5 | Build POST /api/v1/auth/forgot-password | `[X]` |
+| 6.6 | Build POST /api/v1/auth/reset-password | `[X]` |
+| 6.7 | Build JWT verification middleware (FastAPI dependency) | `[X]` |
+| 6.8 | Build GET /api/v1/auth/me (protected, returns user_id) | `[X]` |
+| 6.9 | Test all auth flows in Swagger | `[X]` |
+| 6.10 | Test middleware: no token → 401, bad token → 401, valid → 200 | `[X]` |
 
 **Done when:** All 6 auth flows work, middleware rejects bad tokens, DynamoDB Users row created on confirm.
 
