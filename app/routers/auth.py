@@ -1,7 +1,7 @@
 import logging
 
 from botocore.exceptions import ClientError
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status
 
 from app.auth.cognito import (
     confirm_sign_up,
@@ -11,6 +11,8 @@ from app.auth.cognito import (
     reset_password,
     sign_up,
 )
+from app.auth.jwt import get_current_user_id
+from app.db.users import create_user, get_user
 from app.models.auth import (
     ConfirmRequest,
     ForgotPasswordRequest,
@@ -70,6 +72,7 @@ async def signup(body: SignUpRequest) -> dict:
 async def confirm(body: ConfirmRequest) -> dict:
     try:
         confirm_sign_up(body.email, body.code)
+        create_user(user_id=body.user_sub, username=body.username)
         return {"success": True, "data": {"message": "Account confirmed successfully"}}
     except ClientError as e:
         code = e.response["Error"]["Code"]
@@ -217,3 +220,14 @@ async def reset_password_endpoint(body: ResetPasswordRequest) -> dict:
                 "message": "An unexpected error occurred",
             },
         )
+
+
+@router.get("/me", status_code=status.HTTP_200_OK)
+async def get_me(user_id: str = Depends(get_current_user_id)) -> dict:
+    user = get_user(user_id)
+    if user is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail={"code": "USER_NOT_FOUND", "message": "User profile not found"},
+        )
+    return {"success": True, "data": user}

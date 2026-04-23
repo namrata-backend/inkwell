@@ -10,6 +10,8 @@ class SignUpRequest(BaseModel):
 class ConfirmRequest(BaseModel):
     email: EmailStr
     code: str
+    user_sub: str
+    username: str
 
 
 class LoginRequest(BaseModel):
