@@ -126,13 +126,13 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 7.1 | Build POST /api/v1/blogs (create) | `[ ]` |
-| 7.2 | Build GET /api/v1/blogs (list all, paginated) | `[ ]` |
-| 7.3 | Build GET /api/v1/blogs/mine (list own) | `[ ]` |
-| 7.4 | Build GET /api/v1/blogs/{blog_id} (get one) | `[ ]` |
-| 7.5 | Build PUT /api/v1/blogs/{blog_id} (update, owner only) | `[ ]` |
-| 7.6 | Build DELETE /api/v1/blogs/{blog_id} (delete, owner only) | `[ ]` |
-| 7.7 | Test ownership: user B cannot update/delete user A's blog → 403 | `[ ]` |
+| 7.1 | Build POST /api/v1/blogs (create) | `[X]` |
+| 7.2 | Build GET /api/v1/blogs (list all, paginated) | `[X]` |
+| 7.3 | Build GET /api/v1/blogs/mine (list own) | `[X]` |
+| 7.4 | Build GET /api/v1/blogs/{blog_id} (get one) | `[X]` |
+| 7.5 | Build PUT /api/v1/blogs/{blog_id} (update, owner only) | `[X]` |
+| 7.6 | Build DELETE /api/v1/blogs/{blog_id} (delete, owner only) | `[X]` |
+| 7.7 | Test ownership: user B cannot update/delete user A's blog → 403 | `[X]` |
 
 **Done when:** Ownership rules enforced, tested with two different users.
 
