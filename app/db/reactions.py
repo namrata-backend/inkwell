@@ -36,7 +36,10 @@ def put_reaction(
 
 def get_reaction(target_id: str, user_id: str) -> dict | None:
     try:
-        response = table.get_item(Key={"target_id": target_id, "user_id": user_id})
+        response = table.get_item(
+            Key={"target_id": target_id, "user_id": user_id},
+            ConsistentRead=True,
+        )
         return response.get("Item")
     except ClientError as e:
         raise e
