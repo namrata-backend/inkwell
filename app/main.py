@@ -9,6 +9,7 @@ from app.exceptions import register_exception_handlers
 from app.logging_config import logger
 from app.routers.auth import router as auth_router
 from app.routers.blogs import router as blogs_router
+from app.routers.comments import router as comments_router
 
 
 @asynccontextmanager
@@ -30,6 +31,7 @@ app = FastAPI(
 register_exception_handlers(app)
 app.include_router(auth_router)
 app.include_router(blogs_router)
+app.include_router(comments_router)
 
 
 @app.middleware("http")
