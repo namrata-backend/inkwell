@@ -144,14 +144,14 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 8.1 | Build POST /api/v1/comments (create comment) | `[ ]` |
-| 8.2 | Build POST /api/v1/comments/{comment_id}/reply | `[ ]` |
-| 8.3 | Build GET /api/v1/blogs/{blog_id}/comments (tree structure) | `[ ]` |
-| 8.4 | Build DELETE /api/v1/comments/{comment_id} (owner only) | `[ ]` |
-| 8.5 | Build POST /api/v1/reactions (like/dislike blog or comment) | `[ ]` |
-| 8.6 | Build DELETE /api/v1/reactions (remove reaction) | `[ ]` |
-| 8.7 | Test comment tree renders correctly (parents with nested replies) | `[ ]` |
-| 8.8 | Test reaction toggle: like → like again → removed. Like → dislike → flipped | `[ ]` |
+| 8.1 | Build POST /api/v1/comments (create comment) | `[X]` |
+| 8.2 | Build POST /api/v1/comments/{comment_id}/reply | `[X]` |
+| 8.3 | Build GET /api/v1/blogs/{blog_id}/comments (tree structure) | `[X]` |
+| 8.4 | Build DELETE /api/v1/comments/{comment_id} (owner only) | `[X]` |
+| 8.5 | Build POST /api/v1/reactions (like/dislike blog or comment) | `[X]` |
+| 8.6 | Build DELETE /api/v1/reactions (remove reaction) | `[X]` |
+| 8.7 | Test comment tree renders correctly (parents with nested replies) | `[X]` |
+| 8.8 | Test reaction toggle: like → like again → removed. Like → dislike → flipped | `[X]` |
 
 **Done when:** Comment tree correct, reaction toggle works, no duplicate reactions possible.
 
