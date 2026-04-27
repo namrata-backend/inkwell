@@ -1,6 +1,6 @@
 -r requirements.txt
 black==26.3.1
-certifi==2026.2.25
+certifi==2026.4.22
 cfgv==3.5.0
 coverage==7.13.5
 distlib==0.4.0
