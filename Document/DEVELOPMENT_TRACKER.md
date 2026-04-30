@@ -163,12 +163,12 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 9.1 | Build GET /api/v1/blogs/upload-url (returns pre-signed PUT URL) | `[ ]` |
-| 9.2 | Test: PUT image file directly to S3 using the URL | `[ ]` |
-| 9.3 | Update blog create to accept image_key | `[ ]` |
-| 9.4 | Update blog get to return pre-signed GET URL for image | `[ ]` |
-| 9.5 | Test full cycle: get URL → upload → create blog → fetch → image displays | `[ ]` |
-| 9.6 | Test URL expiry (set short TTL, confirm it stops working after) | `[ ]` |
+| 9.1 | Build GET /api/v1/blogs/upload-url (returns pre-signed PUT URL) | `[X]` |
+| 9.2 | Test: PUT image file directly to S3 using the URL | `[X]` |
+| 9.3 | Update blog create to accept image_key | `[X]` |
+| 9.4 | Update blog get to return pre-signed GET URL for image | `[X]` |
+| 9.5 | Test full cycle: get URL → upload → create blog → fetch → image displays | `[X]` |
+| 9.6 | Test URL expiry (set short TTL, confirm it stops working after) | `[X]` |
 
 **Done when:** Full upload → store → retrieve → display cycle works end to end.
 
