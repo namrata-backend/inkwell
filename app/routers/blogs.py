@@ -1,6 +1,7 @@
 import base64
 import json
 import logging
+import uuid
 
 from botocore.exceptions import ClientError
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -14,6 +15,7 @@ from app.db.blogs import (
     list_blogs_by_author,
     update_blog,
 )
+from app.db.s3 import generate_presigned_download_url, generate_presigned_upload_url
 from app.models.blogs import CreateBlogRequest, UpdateBlogRequest
 
 router = APIRouter(prefix="/api/v1/blogs", tags=["Blogs"])
@@ -120,6 +122,15 @@ async def list_mine(
         )
 
 
+@router.get("/upload-url", status_code=status.HTTP_200_OK)
+async def get_upload_url(
+    user_id: str = Depends(get_current_user_id),
+) -> dict:
+    object_key = f"blog-images/{user_id}/{uuid.uuid4()}"
+    url = generate_presigned_upload_url(object_key)
+    return {"success": True, "data": {"upload_url": url, "object_key": object_key}}
+
+
 @router.get("/{blog_id}", status_code=status.HTTP_200_OK)
 async def get_one(blog_id: str) -> dict:
     try:
@@ -132,6 +143,8 @@ async def get_one(blog_id: str) -> dict:
                     "message": "Blog with this ID does not exist",
                 },
             )
+        if blog.get("image_key"):
+            blog["image_url"] = generate_presigned_download_url(blog["image_key"])
         return {"success": True, "data": blog}
     except ClientError as e:
         logger.error({"event": "get_blog_error", "error": str(e)})
