@@ -197,9 +197,9 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 11.1 | Add Mangum handler to main.py | `[ ]` |
-| 11.2 | Verify uvicorn still works locally after adding Mangum | `[ ]` |
-| 11.3 | Verify /docs, /health, one protected endpoint still work | `[ ]` |
+| 11.1 | Add Mangum handler to main.py | `[X]` |
+| 11.2 | Verify uvicorn still works locally after adding Mangum | `[X]` |
+| 11.3 | Verify /docs, /health, one protected endpoint still work | `[X]` |
 
 **Done when:** Mangum added, nothing broke locally.
 
