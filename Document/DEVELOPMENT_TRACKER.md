@@ -70,7 +70,7 @@ Update status after each step is verified. Never mark something Done until the "
 | Step | Task | Status |
 |------|------|--------|
 | 4.1 | Create Cognito User Pool with email sign-in | `[X]` |
-| 4.2 | Create App Client (public, no secret) | `[X]` |
+| 4.2 | Create App Client (public, no secret) | `[X]` | 
 | 4.3 | Save User Pool ID, App Client ID, Region to .env | `[X]` |
 | 4.4 | Manual test: create user in console, receive email | `[X]` |
 | 4.5 | Test full signup + confirm + login via AWS CLI or console | `[X]` |
