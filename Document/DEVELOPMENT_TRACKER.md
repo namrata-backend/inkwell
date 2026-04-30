@@ -180,12 +180,12 @@ Update status after each step is verified. Never mark something Done until the "
 
 | Step | Task | Status |
 |------|------|--------|
-| 10.1 | Create Lambda execution role | `[ ]` |
-| 10.2 | Attach AWSLambdaBasicExecutionRole (CloudWatch Logs) | `[ ]` |
-| 10.3 | Add scoped DynamoDB permissions (4 tables + GSIs) | `[ ]` |
-| 10.4 | Add scoped S3 permissions (your bucket only) | `[ ]` |
-| 10.5 | Add scoped Cognito permissions (only actions used) | `[ ]` |
-| 10.6 | Verify with IAM policy simulator — allowed actions pass, others deny | `[ ]` |
+| 10.1 | Create Lambda execution role | `[X]` |
+| 10.2 | Attach AWSLambdaBasicExecutionRole (CloudWatch Logs) | `[X]` |
+| 10.3 | Add scoped DynamoDB permissions (4 tables + GSIs) | `[X]` |
+| 10.4 | Add scoped S3 permissions (your bucket only) | `[X]` |
+| 10.5 | Add scoped Cognito permissions (only actions used) | `[X]` |
+| 10.6 | Verify with IAM policy simulator — allowed actions pass, others deny | `[X]` |
 
 **Done when:** Simulator confirms least-privilege access for every service.
 
