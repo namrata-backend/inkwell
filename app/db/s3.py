@@ -18,7 +18,6 @@ def generate_presigned_upload_url(object_key: str, expires_in: int = 300) -> str
         Params={
             "Bucket": settings.S3_BUCKET_NAME,
             "Key": object_key,
-            "ContentType": "image/*",
         },
         ExpiresIn=expires_in,
     )
