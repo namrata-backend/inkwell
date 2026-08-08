@@ -10,7 +10,7 @@ cryptography==46.0.7
 ecdsa==0.19.2
 fastapi==0.136.0
 h11==0.16.0
-idna==3.11
+idna==3.13
 jmespath==1.1.0
 mangum==0.21.0
 pyasn1==0.6.3
